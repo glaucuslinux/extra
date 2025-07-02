@@ -12,8 +12,8 @@ prepare() {
 
 configure() {
   "$CERD"/autoconf/files/glaucus-configure \
-    --build=$BLD \
-    --host=$TGT \
+    --build=$BUILD \
+    --host=$CTARGET \
     --disable-static \
     --enable-pic \
     --with-pkg-config-dir=/usr/lib/${nom}ig \
@@ -30,7 +30,7 @@ package() {
     install-strip
 
   # Compatibility symlinks
-  for i in pkg-config $TGT-$nom $TGT-pkg-config; do
+  for i in pkg-config $CTARGET-$nom $CTARGET-pkg-config; do
     ln -fs $nom "$CRSD"/usr/bin/$i
   done
 

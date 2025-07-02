@@ -17,8 +17,8 @@ prepare() {
 configure() {
   ac_cv_prog_swig_found=no \
   "$CERD"/autoconf/files/glaucus-configure \
-    --build=$BLD \
-    --host=$TGT \
+    --build=$BUILD \
+    --host=$CTARGET \
     --disable-static \
     --enable-pic \
     --without-python3
