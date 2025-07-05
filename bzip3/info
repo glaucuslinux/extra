@@ -6,7 +6,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-nom="bzip3"
 ver="1.4.0"
 url="https://github.com/kspalaiologos/bzip3/releases/download/1.4.0/bzip3-1.4.0.tar.zst"
 sum=""

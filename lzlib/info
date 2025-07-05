@@ -6,7 +6,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-nom="lzlib"
 ver="1.15"
 url="https://download.savannah.nongnu.org/releases/lzip/lzlib/lzlib-1.15.tar.gz"
 sum="afb9796bb37bfc05ad3c6e0067ed9169"

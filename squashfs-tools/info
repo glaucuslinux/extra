@@ -6,7 +6,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-nom="squashfs-tools"
 ver="4.6.1"
 url="https://github.com/plougher/squashfs-tools/archive/4.6.1.tar.gz"
 sum=""

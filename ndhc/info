@@ -6,7 +6,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-nom="ndhc"
 ver="2024-05-24"
 url="https://github.com/niklata/ndhc/archive/refs/tags/v2024-05-24.tar.gz"
 sum=""

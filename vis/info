@@ -6,7 +6,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-nom="vis"
 ver="0.9"
 url="https://github.com/martanne/vis/archive/v0.9.tar.gz"
 sum="8c0e91ff1ae6276d30687694acc80610"

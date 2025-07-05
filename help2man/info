@@ -6,7 +6,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-nom="help2man"
 ver="1.49.3"
 url="https://ftpmirror.gnu.org/help2man/help2man-1.49.3.tar.xz"
 sum=""

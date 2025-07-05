@@ -6,7 +6,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-nom="plocate"
 ver="1.1.22"
 url="https://plocate.sesse.net/download/plocate-1.1.22.tar.gz"
 sum=""

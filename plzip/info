@@ -6,7 +6,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-nom="plzip"
 ver="1.12"
 url="https://download.savannah.nongnu.org/releases/lzip/plzip/plzip-1.12.tar.gz"
 sum="16f779c85dc72a436493f58a5cd3c0db"

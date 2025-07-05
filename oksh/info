@@ -6,7 +6,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-nom="oksh"
 ver="7.6"
 url="https://github.com/ibara/oksh/releases/download/oksh-7.6/oksh-7.6.tar.gz"
 sum="e23f338255d567484b9edf9bff4a596e"

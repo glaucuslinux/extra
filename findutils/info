@@ -6,7 +6,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-nom="findutils"
 ver="4.10.0"
 url="https://ftpmirror.gnu.org/findutils/findutils-4.10.0.tar.xz"
 sum=""

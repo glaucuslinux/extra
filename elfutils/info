@@ -6,7 +6,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-nom="elfutils"
 ver="0.191"
 url="https://sourceware.org/elfutils/ftp/0.191/elfutils-0.191.tar.bz2"
 sum=""
