@@ -8,7 +8,7 @@
 
 prepare() {
   patch \
-    -i "$CERD"/$nom/patches/glaucus/0001-aws-lc-compatibility.patch \
+    -i "$core"/$nom/patches/glaucus/0001-aws-lc-compatibility.patch \
     -p 0
 
   autoreconf -vfis
@@ -51,9 +51,9 @@ check() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install-strip
 
-  ln -fs $nom "$SACD"/usr/bin/wget
-  rm -fv "$SACD"/usr/bin/${nom}_noinstall
+  ln -fs $nom "$dir"/usr/bin/wget
+  rm -fv "$dir"/usr/bin/${nom}_noinstall
 }

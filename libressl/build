@@ -30,8 +30,8 @@ check() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install-strip
 
-  ln -fs ../../cert.pem "$SACD"/etc/ssl/certs/ca-certificates.crt
+  ln -fs ../../cert.pem "$dir"/etc/ssl/certs/ca-certificates.crt
 }

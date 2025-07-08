@@ -29,7 +29,7 @@ check() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install_bin \
     install_include \
     install_lib_shared

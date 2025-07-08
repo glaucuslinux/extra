@@ -13,11 +13,11 @@ prepare() {
 
 build() {
   CFLAGS="$CFLAGS -DMKSH_BINSHPOSIX -DMKSH_BINSHREDUCED" \
-  sh "$TMPD"/mksh/mksh/Build.sh \
+  sh "$tmp"/mksh/mksh/Build.sh \
     -L \
     -r
 }
 
 package() {
-  mv -f $nom "$SACD"/usr/bin
+  mv -f $nom "$dir"/usr/bin
 }

@@ -7,13 +7,13 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 prepare() {
-  cd "$TMPD"/$nom/$nom-$ver-stable
+  cd "$tmp"/$nom/$nom-$ver-stable
 
   ./autogen.sh
 }
 
 configure() {
-  "$CERD"/autoconf/files/glaucus-configure \
+  "$core"/autoconf/files/glaucus-configure \
     --build=$BUILD \
     --host=$CTARGET \
     --enable-opensslall \
@@ -27,13 +27,13 @@ build() {
 
 package() {
   make \
-    DESTDIR="$CRSD" \
+    DESTDIR="$cross" \
     install-strip
 
-  ln -fs $nom/openssl "$CRSD"/usr/include
+  ln -fs $nom/openssl "$cross"/usr/include
 
   for i in libcrypto libssl libtls; do
-    ln -fs lib$nom.so "$CRSD"/usr/lib/$i.so
-    ln -fs $nom.pc "$CRSD"/usr/lib/pkgconfig/$i.pc
+    ln -fs lib$nom.so "$cross"/usr/lib/$i.so
+    ln -fs $nom.pc "$cross"/usr/lib/pkgconfig/$i.pc
   done
 }

@@ -8,7 +8,7 @@
 
 configure() {
   patch \
-    -i "$CERD"/$nom/patches/glaucus/0001-disable-static.patch \
+    -i "$core"/$nom/patches/glaucus/0001-disable-static.patch \
     -p 0
 }
 
@@ -28,6 +28,6 @@ package() {
     INCDIR=/usr/include \
     LIBDIR=/usr/lib \
     MANDIR=/usr/share/man/man3 \
-    DESTDIR="$CRSD" \
+    DESTDIR="$cross" \
     install
 }

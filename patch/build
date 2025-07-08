@@ -15,7 +15,7 @@ prepare() {
   CVE-2019-13636 \
   CVE-2019-13638 \
   CVE-2019-20633; do
-    $nom -p1 -i "$CERD"/$nom/${nom}es/alpine/$i.$nom
+    $nom -p1 -i "$core"/$nom/${nom}es/alpine/$i.$nom
   done
   
   autoreconf -vfis
@@ -31,8 +31,8 @@ build() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install-strip
 
-  rm -fv "$SACD"/usr/lib/charset.alias
+  rm -fv "$dir"/usr/lib/charset.alias
 }

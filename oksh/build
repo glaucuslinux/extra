@@ -20,11 +20,11 @@ build() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install
 
-  cp -fPp "$CERD"/$nom/files/ksh.kshrc "$SACD"/etc
+  cp -fPp "$core"/$nom/files/ksh.kshrc "$dir"/etc
 
-  ln -fs $nom "$SACD"/usr/bin/ksh
-  ln -fs $nom "$SACD"/usr/bin/rksh
+  ln -fs $nom "$dir"/usr/bin/ksh
+  ln -fs $nom "$dir"/usr/bin/rksh
 }

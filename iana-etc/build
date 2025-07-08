@@ -7,9 +7,9 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 package() {
-  mkdir -p "$SACD"/etc
+  mkdir -p "$dir"/etc
   cp -fPp \
-    "$TMPD"/$nom/$nom-$ver/protocols \
-    "$TMPD"/$nom/$nom-$ver/services \
-    "$SACD"/etc
+    "$tmp"/$nom/$nom-$ver/protocols \
+    "$tmp"/$nom/$nom-$ver/services \
+    "$dir"/etc
 }

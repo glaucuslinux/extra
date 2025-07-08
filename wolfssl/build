@@ -7,7 +7,7 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 prepare() {
-  cd "$TMPD"/$nom/$nom-$ver-stable
+  cd "$tmp"/$nom/$nom-$ver-stable
 
   ./autogen.sh
 }
@@ -30,13 +30,13 @@ check() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install-strip
 
-  ln -fs $nom/openssl "$SACD"/usr/include
+  ln -fs $nom/openssl "$dir"/usr/include
 
   for i in libcrypto libssl libtls; do
-    ln -fs lib$nom.so "$SACD"/usr/lib/$i.so
-    ln -fs $nom.pc "$SACD"/usr/lib/pkgconfig/$i.pc
+    ln -fs lib$nom.so "$dir"/usr/lib/$i.so
+    ln -fs $nom.pc "$dir"/usr/lib/pkgconfig/$i.pc
   done
 }

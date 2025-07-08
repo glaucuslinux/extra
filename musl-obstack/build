@@ -27,8 +27,8 @@ check() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install-strip
 
-  ln -fs $nom.pc "$SACD"/usr/lib/libobstack.pc
+  ln -fs $nom.pc "$dir"/usr/lib/libobstack.pc
 }

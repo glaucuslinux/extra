@@ -7,27 +7,27 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 prepare() {
-  cp -fPp $CERD/binutils/config.guess .
-  cp -fPp $CERD/binutils/config.sub .
+  cp -fPp $core/binutils/config.guess .
+  cp -fPp $core/binutils/config.sub .
 
   # bind mess
   tar xvf bind/bind.tar.gz -C bind
 
-  cp -fPp $CERD/binutils/config.guess bind/bind-9.11.36
-  cp -fPp $CERD/binutils/config.sub bind/bind-9.11.36
+  cp -fPp $core/binutils/config.guess bind/bind-9.11.36
+  cp -fPp $core/binutils/config.sub bind/bind-9.11.36
 
-  cp -fPp $CERD/binutils/config.guess bind/bind-9.11.36/contrib/dnsperf-2.1.0.0-1
-  cp -fPp $CERD/binutils/config.sub bind/bind-9.11.36/contrib/dnsperf-2.1.0.0-1
+  cp -fPp $core/binutils/config.guess bind/bind-9.11.36/contrib/dnsperf-2.1.0.0-1
+  cp -fPp $core/binutils/config.sub bind/bind-9.11.36/contrib/dnsperf-2.1.0.0-1
 
-  cp -fPp $CERD/binutils/config.guess bind/bind-9.11.36/contrib/idn/idnkit-1.0-src
-  cp -fPp $CERD/binutils/config.sub bind/bind-9.11.36/contrib/idn/idnkit-1.0-src
+  cp -fPp $core/binutils/config.guess bind/bind-9.11.36/contrib/idn/idnkit-1.0-src
+  cp -fPp $core/binutils/config.sub bind/bind-9.11.36/contrib/idn/idnkit-1.0-src
 
   patch \
-    -i $CERD/$nom/patches/gentoo/$nom-4.4.3-fix-perms.patch.patch \
+    -i $core/$nom/patches/gentoo/$nom-4.4.3-fix-perms.patch.patch \
     -p 1
 
   patch \
-    -i $CERD/$nom/patches/openembedded/0001-workaround-busybox-limitation-in-linux-dhclient-script.patch \
+    -i $core/$nom/patches/openembedded/0001-workaround-busybox-limitation-in-linux-dhclient-script.patch \
     -p 1
 }
 
@@ -57,22 +57,22 @@ build() {
 
 package() {
   make \
-    DESTDIR=$SACD \
+    DESTDIR=$dir \
     install-strip
 
-  mv -f $SACD/etc/$nom/dhclient.conf.example $SACD/etc/$nom/dhclient.conf
-  cp -fPp doc/examples/dhclient-${nom}v6.conf $SACD/etc/$nom/dhclient6.conf
-  mv -f $SACD/etc/$nom/${nom}d.conf.example $SACD/etc/$nom/${nom}d.conf
-  cp -fPp doc/examples/${nom}d-${nom}v6.conf $SACD/etc/$nom/${nom}d6.conf
+  mv -f $dir/etc/$nom/dhclient.conf.example $dir/etc/$nom/dhclient.conf
+  cp -fPp doc/examples/dhclient-${nom}v6.conf $dir/etc/$nom/dhclient6.conf
+  mv -f $dir/etc/$nom/${nom}d.conf.example $dir/etc/$nom/${nom}d.conf
+  cp -fPp doc/examples/${nom}d-${nom}v6.conf $dir/etc/$nom/${nom}d6.conf
 
-  cp -fPp client/scripts/linux $SACD/usr/bin/dhclient-script
+  cp -fPp client/scripts/linux $dir/usr/bin/dhclient-script
 
   rm -fv \
-    $SACD/usr/lib/lib$nom.a \
-    $SACD/usr/lib/lib${nom}ctl.a \
-    $SACD/usr/lib/libomapi.a
+    $dir/usr/lib/lib$nom.a \
+    $dir/usr/lib/lib${nom}ctl.a \
+    $dir/usr/lib/libomapi.a
 
   mkdir -p \
-    $SACD/run/$nom \
-    $SACD/var/lib/$nom
+    $dir/run/$nom \
+    $dir/var/lib/$nom
 }

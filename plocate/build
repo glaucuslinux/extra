@@ -8,7 +8,7 @@
 
 prepare() {
   patch \
-    -i "$CERD"/$nom/patches/glaucus/0001-fix-man-page.patch \
+    -i "$core"/$nom/patches/glaucus/0001-fix-man-page.patch \
     -p 0
 }
 
@@ -26,18 +26,18 @@ build() {
 }
 
 package() {
-  DESTDIR="$SACD" \
+  DESTDIR="$dir" \
   muon \
     -C build \
     install
 
-  cp -fPp "$CERD"/$nom/files/updatedb.conf "$SACD"/etc
+  cp -fPp "$core"/$nom/files/updatedb.conf "$dir"/etc
 
   # Compatibility symlinks
   for i in locate mlocate slocate; do
-    ln -fs $nom "$SACD"/usr/bin/$i
+    ln -fs $nom "$dir"/usr/bin/$i
   done
-  ln -fs pupdatedb "$SACD"/usr/bin/updatedb
+  ln -fs pupdatedb "$dir"/usr/bin/updatedb
 
-  ln -fs $nom "$SACD"/var/lib/locate
+  ln -fs $nom "$dir"/var/lib/locate
 }

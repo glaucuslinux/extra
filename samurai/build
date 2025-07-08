@@ -8,10 +8,10 @@
 
 prepare() {
   patch \
-    -i "$CERD"/$nom/patches/alpine/CVE-2021-30218.patch \
+    -i "$core"/$nom/patches/alpine/CVE-2021-30218.patch \
     -p 1
   patch \
-    -i "$CERD"/$nom/patches/alpine/CVE-2021-30219.patch \
+    -i "$core"/$nom/patches/alpine/CVE-2021-30219.patch \
     -p 1
 }
 
@@ -26,9 +26,9 @@ package() {
     PREFIX=/usr \
     BINDIR=/usr/bin \
     MANDIR=/usr/share/man \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install
 
   # Compatibility symlink
-  ln -fs samu "$SACD"/usr/bin/ninja
+  ln -fs samu "$dir"/usr/bin/ninja
 }

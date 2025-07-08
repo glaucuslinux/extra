@@ -12,7 +12,7 @@ prepare() {
   0002-fix-utmp-file-path \
   0003-netbsd-curses-compatibility; do
     patch \
-      -i "$CERD"/$nom/patches/glaucus/$i.patch \
+      -i "$core"/$nom/patches/glaucus/$i.patch \
       -p 0
   done
 
@@ -42,10 +42,10 @@ build() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install-strip
 
   # `pidwait` and `pkill` are identical to `pgrep`
-  ln -fs pgrep "$SACD"/usr/bin/pidwait
-  ln -fs pgrep "$SACD"/usr/bin/pkill
+  ln -fs pgrep "$dir"/usr/bin/pidwait
+  ln -fs pgrep "$dir"/usr/bin/pkill
 }

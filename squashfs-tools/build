@@ -18,9 +18,9 @@ build() {
 
 package() {
   make \
-    INSTALL_PREFIX="$SACD"/usr \
-    INSTALL_DIR="$SACD"/usr/bin \
-    INSTALL_MANPAGES_DIR="$SACD"/usr/share/man/man1 \
+    INSTALL_PREFIX="$dir"/usr \
+    INSTALL_DIR="$dir"/usr/bin \
+    INSTALL_MANPAGES_DIR="$dir"/usr/share/man/man1 \
     -C $nom \
     install
 }

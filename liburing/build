@@ -7,7 +7,7 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 prepare() {
-  cd "$TMPD"/$nom/$nom-$nom-$ver
+  cd "$tmp"/$nom/$nom-$nom-$ver
 }
 
 configure() {
@@ -21,6 +21,6 @@ build() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install
 }

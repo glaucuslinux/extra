@@ -11,8 +11,8 @@ build() {
 }
 
 package() {
-  mkdir -p "$SACD"/usr/bin
-  mv -f $nom "$SACD"/usr/bin
-  ln -fs $nom "$SACD"/usr/bin/ksh
-  ln -fs $nom "$SACD"/usr/bin/rksh
+  mkdir -p "$dir"/usr/bin
+  mv -f $nom "$dir"/usr/bin
+  ln -fs $nom "$dir"/usr/bin/ksh
+  ln -fs $nom "$dir"/usr/bin/rksh
 }

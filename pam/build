@@ -30,8 +30,8 @@ build() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install-strip
 
-  chmod 4755 "$SACD"/usr/bin/unix_chkpwd
+  chmod 4755 "$dir"/usr/bin/unix_chkpwd
 }

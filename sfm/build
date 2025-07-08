@@ -13,6 +13,6 @@ build() {
 }
 
 package() {
-  mkdir -p "$SACD"/usr/bin
-  mv -f $nom "$SACD"/usr/bin
+  mkdir -p "$dir"/usr/bin
+  mv -f $nom "$dir"/usr/bin
 }

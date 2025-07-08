@@ -21,10 +21,10 @@ build() {
 }
 
 package() {
-  DESTDIR="$SACD" \
+  DESTDIR="$dir" \
   make \
     -C build \
     install/strip
 
-  ln -fs $nom "$SACD"/usr/bin/ld
+  ln -fs $nom "$dir"/usr/bin/ld
 }

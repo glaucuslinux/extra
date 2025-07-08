@@ -7,13 +7,13 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 prepare() {
-  cd "$TMPD"/$nom
-  cp -fPpR "$TMPD"/tzdata/. .
+  cd "$tmp"/$nom
+  cp -fPpR "$tmp"/tzdata/. .
 }
 
 configure() {
   patch \
-    -i "$CERD"/$nom/patches/glaucus/0001-disable-static.patch \
+    -i "$core"/$nom/patches/glaucus/0001-disable-static.patch \
     -p 0
 }
 
@@ -28,14 +28,14 @@ build() {
 }
 
 package() {
-  mkdir -p "$SACD"/usr/bin
+  mkdir -p "$dir"/usr/bin
   cp -fPp \
     tzselect \
     zdump \
     zic \
-    "$SACD"/usr/bin
+    "$dir"/usr/bin
 
   mkdir -p \
-    "$SACD"/usr/share/zoneinfo/posix \
-    "$SACD"/usr/share/zoneinfo/right
+    "$dir"/usr/share/zoneinfo/posix \
+    "$dir"/usr/share/zoneinfo/right
 }

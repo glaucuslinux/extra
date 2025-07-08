@@ -17,6 +17,6 @@ build() {
 }
 
 package() {
-  mkdir -p "$SACD"/boot
-  mv -f $nom.img "$SACD"/boot
+  mkdir -p "$dir"/boot
+  mv -f $nom.img "$dir"/boot
 }

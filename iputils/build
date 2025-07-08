@@ -28,11 +28,11 @@ check() {
 }
 
 package() {
-  DESTDIR="$SACD" \
+  DESTDIR="$dir" \
   muon \
     -C build \
     install
 
-  ln -fs ping "$SACD"/usr/bin/ping6
-  ln -fs tracepath "$SACD"/usr/bin/tracepath6
+  ln -fs ping "$dir"/usr/bin/ping6
+  ln -fs tracepath "$dir"/usr/bin/tracepath6
 }

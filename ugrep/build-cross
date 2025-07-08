@@ -11,7 +11,7 @@ prepare() {
 }
 
 configure() {
-  "$CERD"/autoconf/files/glaucus-configure \
+  "$core"/autoconf/files/glaucus-configure \
     --build=$BUILD \
     --host=$CTARGET \
     --without-pcre2 \
@@ -30,11 +30,11 @@ build() {
 
 package() {
   make \
-    DESTDIR="$CRSD" \
+    DESTDIR="$cross" \
     install-strip
 
 for i in egrep fgrep grep ug; do
-  ln -fs $nom "$CRSD"/usr/bin/$i
+  ln -fs $nom "$cross"/usr/bin/$i
 done
-  ln -fs $nom+ "$CRSD"/usr/bin/ug+
+  ln -fs $nom+ "$cross"/usr/bin/ug+
 }

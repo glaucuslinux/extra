@@ -8,7 +8,7 @@
 
 prepare() {
   patch \
-    -i "$CERD"/$nom/patches/glaucus/0001-disable-static.patch \
+    -i "$core"/$nom/patches/glaucus/0001-disable-static.patch \
     -p 0
 }
 
@@ -24,10 +24,10 @@ package() {
     libdir=/usr/lib \
     CFLAGS="$CFLAGS" \
     LDFLAGS="$LDFLAGS" \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install
 
-  mv -f "$SACD"/usr/lib/libargp.so "$SACD"/usr/lib/libargp.so.0.0.0
-  ln -fs libargp.so.0.0.0 "$SACD"/usr/lib/libargp.so
-  ln -fs libargp.so.0.0.0 "$SACD"/usr/lib/libargp.so.0
+  mv -f "$dir"/usr/lib/libargp.so "$dir"/usr/lib/libargp.so.0.0.0
+  ln -fs libargp.so.0.0.0 "$dir"/usr/lib/libargp.so
+  ln -fs libargp.so.0.0.0 "$dir"/usr/lib/libargp.so.0
 }

@@ -8,7 +8,7 @@
 
 prepare() {
   patch \
-    -i "$CERD"/$nom/patches/alpine/apply-disable.patch \
+    -i "$core"/$nom/patches/alpine/apply-disable.patch \
     -p 1
 
   ./autogen.sh
@@ -16,7 +16,7 @@ prepare() {
 
 configure() {
   ac_cv_prog_swig_found=no \
-  "$CERD"/autoconf/files/glaucus-configure \
+  "$core"/autoconf/files/glaucus-configure \
     --build=$BUILD \
     --host=$CTARGET \
     --disable-static \
@@ -30,11 +30,11 @@ build() {
 
 package() {
   make \
-    DESTDIR="$CRSD" \
+    DESTDIR="$cross" \
     install-strip
 
   # Remove libtool archives
   rm -fv \
-    "$CRSD"/usr/lib/$nom.la \
-    "$CRSD"/usr/lib/libdrop_ambient.la
+    "$cross"/usr/lib/$nom.la \
+    "$cross"/usr/lib/libdrop_ambient.la
 }

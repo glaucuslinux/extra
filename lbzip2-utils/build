@@ -20,19 +20,19 @@ build() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install-strip
 
   # Compatibility symlinks
-  ln -fs lbzcmp "$SACD"/usr/bin/bzcmp
-  ln -fs lbzdiff "$SACD"/usr/bin/bzdiff
-  ln -fs lbzegrep "$SACD"/usr/bin/bzegrep
-  ln -fs lbzexe "$SACD"/usr/bin/bzexe
-  ln -fs lbzfgrep "$SACD"/usr/bin/bzfgrep
-  ln -fs lbzforce "$SACD"/usr/bin/bzforce
-  ln -fs lbzgrep "$SACD"/usr/bin/bzgrep
-  ln -fs lbzrecover "$SACD"/usr/bin/bzip2recover
-  ln -fs lbzless "$SACD"/usr/bin/bzless
-  ln -fs lbzmerge "$SACD"/usr/bin/bzmerge
-  ln -fs lbzmore "$SACD"/usr/bin/bzmore
+  ln -fs lbzcmp "$dir"/usr/bin/bzcmp
+  ln -fs lbzdiff "$dir"/usr/bin/bzdiff
+  ln -fs lbzegrep "$dir"/usr/bin/bzegrep
+  ln -fs lbzexe "$dir"/usr/bin/bzexe
+  ln -fs lbzfgrep "$dir"/usr/bin/bzfgrep
+  ln -fs lbzforce "$dir"/usr/bin/bzforce
+  ln -fs lbzgrep "$dir"/usr/bin/bzgrep
+  ln -fs lbzrecover "$dir"/usr/bin/bzip2recover
+  ln -fs lbzless "$dir"/usr/bin/bzless
+  ln -fs lbzmerge "$dir"/usr/bin/bzmerge
+  ln -fs lbzmore "$dir"/usr/bin/bzmore
 }

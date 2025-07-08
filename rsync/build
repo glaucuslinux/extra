@@ -23,11 +23,11 @@ build() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install-strip
 
-  mkdir -p "$SACD"/etc
-  cp -fPp "$CERD"/$nom/files/${nom}d.conf "$SACD"/etc
+  mkdir -p "$dir"/etc
+  cp -fPp "$core"/$nom/files/${nom}d.conf "$dir"/etc
 
-  cp -fPp support/r$nom "$SACD"/usr/bin
+  cp -fPp support/r$nom "$dir"/usr/bin
 }

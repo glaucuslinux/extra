@@ -14,7 +14,7 @@ build() {
 package() {
   python3 setup.py \
     install \
-    --root="$SACD" \
+    --root="$dir" \
     --optimize=2 \
     --force \
     --skip-build

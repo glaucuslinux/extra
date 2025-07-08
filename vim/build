@@ -57,13 +57,13 @@ build() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install
 
-  mkdir -p "$SACD"/etc
-  ln -fs ../usr/share/$nom/${nom}rc "$SACD"/etc
+  mkdir -p "$dir"/etc
+  ln -fs ../usr/share/$nom/${nom}rc "$dir"/etc
 
-  ln -fs $nom "$SACD"/usr/bin/vi
+  ln -fs $nom "$dir"/usr/bin/vi
 
-  cp -fPp "$CERD"/$nom/files/${nom}rc "$SACD"/usr/share/$nom
+  cp -fPp "$core"/$nom/files/${nom}rc "$dir"/usr/share/$nom
 }

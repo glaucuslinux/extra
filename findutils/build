@@ -11,7 +11,7 @@ prepare() {
 
   # Disable locate because we're using `plocate`
   patch \
-    -i $CERD/$nom/patches/glaucus/0001-disable-locate-updatedb-and-frcode.patch \
+    -i $core/$nom/patches/glaucus/0001-disable-locate-updatedb-and-frcode.patch \
     -p 0
 }
 
@@ -41,6 +41,6 @@ check() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install-strip
 }

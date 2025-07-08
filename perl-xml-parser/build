@@ -16,10 +16,10 @@ build() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install
 
   rm -fv \
-    "$SACD"/usr/lib/perl5/5.38/core_perl/perllocal.pod \
-    "$SACD"/usr/lib/perl5/5.38/vendor_perl/auto/XML/Parser/.packlist
+    "$dir"/usr/lib/perl5/5.38/core_perl/perllocal.pod \
+    "$dir"/usr/lib/perl5/5.38/vendor_perl/auto/XML/Parser/.packlist
 }

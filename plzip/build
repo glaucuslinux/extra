@@ -20,9 +20,9 @@ build() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install-strip
 
   # Compatibility symlinks
-  ln -fs $nom "$SACD"/usr/bin/lzip
+  ln -fs $nom "$dir"/usr/bin/lzip
 }

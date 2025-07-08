@@ -20,12 +20,12 @@ build() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install-strip
 
   # Compatibility symlinks
-  ln -fs lbunzip2 "$SACD"/usr/bin/bunzip2
-  ln -fs lbzcat "$SACD"/usr/bin/bzcat
-  ln -fs $nom "$SACD"/usr/bin/bzip2
-  ln -fs $nom "$SACD"/usr/bin/pbzip2
+  ln -fs lbunzip2 "$dir"/usr/bin/bunzip2
+  ln -fs lbzcat "$dir"/usr/bin/bzcat
+  ln -fs $nom "$dir"/usr/bin/bzip2
+  ln -fs $nom "$dir"/usr/bin/pbzip2
 }

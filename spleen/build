@@ -7,13 +7,13 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 package() {
-  mkdir -p "$SACD"/usr/share/consolefonts
+  mkdir -p "$dir"/usr/share/consolefonts
   cp -fPp \
-    "$TMPD"/$nom/$nom-$ver/$nom-12x24.psfu \
-    "$TMPD"/$nom/$nom-$ver/$nom-16x32.psfu \
-    "$TMPD"/$nom/$nom-$ver/$nom-32x64.psfu \
-    "$TMPD"/$nom/$nom-$ver/$nom-5x8.psfu \
-    "$TMPD"/$nom/$nom-$ver/$nom-6x12.psfu \
-    "$TMPD"/$nom/$nom-$ver/$nom-8x16.psfu \
-    "$TMPD"/usr/share/consolefonts
+    "$tmp"/$nom/$nom-$ver/$nom-12x24.psfu \
+    "$tmp"/$nom/$nom-$ver/$nom-16x32.psfu \
+    "$tmp"/$nom/$nom-$ver/$nom-32x64.psfu \
+    "$tmp"/$nom/$nom-$ver/$nom-5x8.psfu \
+    "$tmp"/$nom/$nom-$ver/$nom-6x12.psfu \
+    "$tmp"/$nom/$nom-$ver/$nom-8x16.psfu \
+    "$tmp"/usr/share/consolefonts
 }

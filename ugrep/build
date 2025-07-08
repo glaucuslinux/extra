@@ -31,11 +31,11 @@ check() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install-strip
 
 for i in egrep fgrep grep ug; do
-  ln -fs $nom "$SACD"/usr/bin/$i
+  ln -fs $nom "$dir"/usr/bin/$i
 done
-  ln -fs $nom+ "$SACD"/usr/bin/ug+
+  ln -fs $nom+ "$dir"/usr/bin/ug+
 }

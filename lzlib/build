@@ -14,7 +14,7 @@ prepare() {
 configure() {
   # `CC`, `AR`, `CFLAGS` and `LDFLAGS` have to be specified, otherwise they
   # won't be read, and `--disable-static` implies `--enable-shared`.
-  "$TMPD"/$nom/$nom-$ver/configure \
+  "$tmp"/$nom/$nom-$ver/configure \
     --prefix=/usr \
     --disable-static \
     CC=$CC \
@@ -30,7 +30,7 @@ build() {
 package() {
   # `install-bin-strip` ensures that the `minilzip` binary is installed
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$dir" \
     install-bin-strip \
     install-strip
 }
