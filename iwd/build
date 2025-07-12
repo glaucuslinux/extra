@@ -32,5 +32,5 @@ package() {
     install-strip
 
   mkdir -p "$dir"/etc/$nom
-  cp -fPp "$core"/$nom/main.conf "$dir"/etc/$nom
+  cp -fPp "$core"/$nom/files/main.conf "$dir"/etc/$nom
 }
