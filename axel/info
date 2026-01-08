@@ -8,6 +8,7 @@
 
 ver="2.17.14"
 url="https://github.com/axel-download-accelerator/axel/releases/download/v2.17.14/axel-2.17.14.tar.gz"
-sum=""
+sum="3a64f02e93c2d867480f56fb64b18dd5"
 bld="libressl"
 opt="no-check"
+lic="GPL-2.0-or-later"
