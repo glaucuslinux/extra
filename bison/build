@@ -7,6 +7,10 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 prepare() {
+  patch \
+    -i "$extra"/$nom/patches/gentoo/$nom-$ver-gcc15-glibcxx-assertions.patch \
+    -p 1
+
   autoreconf -vfis
 
   touch \
@@ -18,6 +22,8 @@ configure() {
   glaucus-configure \
     --enable-threads=posix \
     --disable-rpath \
+    --disable-yacc \
+    --disable-assert \
     --disable-nls
 }
 
