@@ -6,6 +6,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-ver="3.10"
-url="https://ftpmirror.gnu.org/diffutils/diffutils-3.10.tar.xz"
-sum=""
+ver="3.12"
+url="https://ftpmirror.gnu.org/diffutils/diffutils-3.12.tar.gz"
+sum="31168f2d4b29b6e7e3bb2e5cd6e9255e"
+lic="GPL-3.0-or-later"
