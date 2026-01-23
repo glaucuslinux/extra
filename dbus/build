@@ -7,39 +7,43 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 prepare() {
-  autoreconf -vfis
+  cd "$tmp"/$nom/$nom-$nom-$ver
 }
 
 configure() {
-  glaucus-configure \
-    --disable-static \
-    --enable-pic \
-    --disable-xml-docs \
-    --disable-doxygen-docs \
-    --disable-ducktype-docs \
-    --disable-selinux \
-    --disable-apparmor \
-    --disable-libaudit \
-    --enable-inotify \
-    --disable-kqueue \
-    --disable-launchd \
-    --disable-systemd \
-    --disable-tests \
-    --enable-epoll \
-    --with-session-socket-dir=/tmp \
-    --with-system-pid-file=/run/$nom/pid \
-    --with-system-socket=/run/$nom/system_bus_socket \
-    --with-console-auth-dir=/run/console \
-    --with-dbus-user=$nom \
-    --without-x
+  glaucus-muon \
+    -Dapparmor=disabled \
+    -Dchecks=false \
+    -Ddbus_user=$nom \
+    -Ddoxygen_docs=disabled \
+    -Dducktype_docs=disabled \
+    -Depoll=enabled \
+    -Dinotify=enabled \
+    -Dkqueue=disabled \
+    -Dlaunchd=disabled \
+    -Dlibaudit=disabled \
+    -Dmodular_tests=disabled \
+    -Dqt_help=disabled \
+    -Drelocation=disabled \
+    -Druntime_dir=/run \
+    -Dselinux=disabled \
+    -Dsession_socket_dir=/tmp \
+    -Dsystem_pid_file=/run/$nom/pid \
+    -Dsystem_socket=/run/$nom/system_bus_socket \
+    -Dsystemd=disabled \
+    -Dx11_autolaunch=disabled \
+    -Dxml_docs=disabled \
+    build
 }
 
 build() {
-  make
+  samu \
+    -C build
 }
 
 package() {
-  make \
-    DESTDIR="$dir" \
-    install-strip
+  DESTDIR="$dir" \
+  muon \
+    -C build \
+    install/strip
 }

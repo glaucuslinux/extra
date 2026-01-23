@@ -6,8 +6,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-ver="1.14.10"
-url="https://dbus.freedesktop.org/releases/dbus/dbus-1.14.10.tar.xz"
-sum=""
+ver="1.16.2"
+url="https://gitlab.freedesktop.org/dbus/dbus/-/archive/dbus-1.16.2/dbus-dbus-1.16.2.tar.gz"
+sum="dac2152beca7ef1b6bb4adad750f71bd"
 bld="expat"
 opt="no-check"
+lic="AFL-2.1 GPL-2.0-or-later"
