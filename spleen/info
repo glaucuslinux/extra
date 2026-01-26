@@ -8,6 +8,7 @@
 
 ver="2.1.0"
 url="https://github.com/fcambus/spleen/releases/download/2.1.0/spleen-2.1.0.tar.gz"
-sum=""
+sum="df4922c21b71aa0e018dbe6cb994c41c"
 run="kbd"
 opt="no-check"
+lic="BSD-2-Clause"
