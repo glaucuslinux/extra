@@ -6,27 +6,29 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-prepare() {
-  patch \
-    -i "$core"/$nom/patches/clear/0001-Lower-test-timeout.patch \
-    -p 1
-
-  autoreconf -vfis
-}
-
 configure() {
   glaucus-configure \
     --enable-threads=posix \
     --disable-nls \
     --disable-rpath \
     --disable-efiemu \
+    --enable-stack-protector \
+    --disable-mm-debug \
+    --enable-cache-stats \
+    --enable-boot-time \
+    --disable-grub-emu-sdl2 \
+    --disable-grub-emu-sdl \
     --disable-grub-mkfont \
-    --enable-grub-themes \
+    --disable-grub-themes \
     --enable-device-mapper \
     --disable-liblzma \
-    --enable-libzfs \
+    --disable-libzfs \
     --disable-werror \
-    --without-included-regex
+    --with-bootdir=/boot \
+    --with-grubdir=$nom \
+    --without-included-regex \
+    --without-dejavufont \
+    --without-unifont
 }
 
 build() {
