@@ -6,7 +6,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-ver="12"
-url="https://github.com/GrapheneOS/hardened_malloc/archive/12.tar.gz"
-sum=""
-opt="no-check"
+ver="2026012100"
+url="https://github.com/GrapheneOS/hardened_malloc/archive/2026012100.tar.gz"
+sum="2afdf472db6093c0126b44b9b202ba4c"
+lic="MIT"

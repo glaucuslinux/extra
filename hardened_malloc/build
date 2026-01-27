@@ -13,6 +13,11 @@ build() {
     VARIANT=light
 }
 
+check() {
+  make \
+    test
+}
+
 package() {
   mkdir -p "$dir"/usr/lib
   mv -f \
