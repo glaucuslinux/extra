@@ -6,8 +6,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-ver="20240813"
-url="https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240813.tar.gz"
-sum=""
+ver="20251111"
+url="https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20251111.tar.gz"
+sum="add6cb8788539292a368083ffa1ba3fe"
 bld="iucode-tool"
 opt="no-check"
+lic="custom"
