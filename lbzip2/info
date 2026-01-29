@@ -7,6 +7,6 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 ver="2.5"
-url="https://deb.debian.org/debian/pool/main/l/lbzip2/lbzip2_2.5.orig.tar.bz2"
-sum=""
-opt="no-check"
+url="https://github.com/kjn/lbzip2/releases/download/v2.5/lbzip2-2.5.tar.gz"
+sum="28c9b3b920c8a5a3c5a0127750a5f255"
+lic="GPL-3.0-or-later"

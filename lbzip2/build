@@ -18,6 +18,11 @@ build() {
   make
 }
 
+check() {
+  make \
+    check
+}
+
 package() {
   make \
     DESTDIR="$dir" \
@@ -27,5 +32,4 @@ package() {
   ln -fs lbunzip2 "$dir"/usr/bin/bunzip2
   ln -fs lbzcat "$dir"/usr/bin/bzcat
   ln -fs $nom "$dir"/usr/bin/bzip2
-  ln -fs $nom "$dir"/usr/bin/pbzip2
 }
