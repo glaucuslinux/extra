@@ -12,9 +12,10 @@ prepare() {
 
 configure() {
   glaucus-configure \
-    --enable-pie \
     --enable-pic \
+    --enable-pie \
     --disable-systemd-service \
+    --disable-manual-pages \
     --enable-libedit \
     --enable-wired \
     --enable-hwsim \

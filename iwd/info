@@ -6,8 +6,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-ver="2.19"
-url="https://cdn.kernel.org/pub/linux/network/wireless/iwd-2.19.tar.gz"
-sum=""
+ver="3.10"
+url="https://cdn.kernel.org/pub/linux/network/wireless/iwd-3.10.tar.gz"
+sum="01bdd0c8901b259692b2260486ab1bfd"
 bld="dbus libedit"
 opt="no-check"
+lic="LGPL-2.1-or-later"
