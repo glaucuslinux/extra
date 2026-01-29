@@ -9,3 +9,4 @@
 ver="latest"
 url="https://github.com/kjn/lbzip2-utils"
 opt="no-check"
+lic="GPL-3.0-or-later"
