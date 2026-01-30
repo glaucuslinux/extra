@@ -8,7 +8,7 @@
 
 prepare() {
   patch \
-    -i "$core"/$nom/patches/glaucus/0001-fix-man-page.patch \
+    -i "$extra"/$nom/patches/glaucus/0001-fix-man-page.patch \
     -p 0
 }
 
@@ -31,7 +31,7 @@ package() {
     -C build \
     install
 
-  cp -fPp "$core"/$nom/files/updatedb.conf "$dir"/etc
+  cp -fPp "$extra"/$nom/files/updatedb.conf "$dir"/etc
 
   # Compatibility symlinks
   for i in locate mlocate slocate; do
