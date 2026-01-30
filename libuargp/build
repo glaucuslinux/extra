@@ -13,7 +13,9 @@ prepare() {
 }
 
 build() {
-  make
+  make \
+    CFLAGS="$CFLAGS -fPIC" \
+    LDFLAGS="$LDFLAGS"
 }
 
 package() {
@@ -21,8 +23,6 @@ package() {
     prefix=/usr \
     bindir=/usr/bin \
     libdir=/usr/lib \
-    CFLAGS="$CFLAGS" \
-    LDFLAGS="$LDFLAGS" \
     DESTDIR="$dir" \
     install
 
