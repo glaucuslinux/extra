@@ -27,7 +27,7 @@ package() {
     install-strip
 
   mkdir -p "$dir"/etc
-  cp -fPp "$core"/$nom/files/${nom}d.conf "$dir"/etc
+  cp -fPp "$extra"/$nom/files/${nom}d.conf "$dir"/etc
 
   cp -fPp support/r$nom "$dir"/usr/bin
 }
