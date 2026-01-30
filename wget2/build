@@ -8,7 +8,7 @@
 
 prepare() {
   patch \
-    -i "$core"/$nom/patches/glaucus/0001-aws-lc-compatibility.patch \
+    -i "$extra"/$nom/patches/glaucus/0001-aws-lc-compatibility.patch \
     -p 0
 
   autoreconf -vfis
