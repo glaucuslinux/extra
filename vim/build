@@ -65,5 +65,5 @@ package() {
 
   ln -fs $nom "$dir"/usr/bin/vi
 
-  cp -fPp "$core"/$nom/files/${nom}rc "$dir"/usr/share/$nom
+  cp -fPp "$extra"/$nom/files/${nom}rc "$dir"/usr/share/$nom
 }
