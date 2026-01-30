@@ -33,5 +33,7 @@ package() {
     install-strip
 
   mkdir -p "$dir"/etc/$nom
-  cp -fPp "$core"/$nom/files/main.conf "$dir"/etc/$nom
+  cp -fPp "$core"/e$nom/files/main.conf "$dir"/etc/$nom
+
+  cp -fPp "$core"/e$nom/files/iwd_passphrase "$dir"/usr/bin
 }
