@@ -9,3 +9,4 @@
 ver="latest"
 url="https://github.com/xhebox/libuargp"
 opt="no-check"
+lic="LGPL-2.1-or-later"

@@ -8,7 +8,7 @@
 
 prepare() {
   patch \
-    -i "$core"/$nom/patches/glaucus/0001-disable-static.patch \
+    -i "$extra"/$nom/patches/glaucus/0001-disable-static.patch \
     -p 0
 }
 
@@ -20,7 +20,6 @@ package() {
   make \
     prefix=/usr \
     bindir=/usr/bin \
-    includedir=/usr/include \
     libdir=/usr/lib \
     CFLAGS="$CFLAGS" \
     LDFLAGS="$LDFLAGS" \
