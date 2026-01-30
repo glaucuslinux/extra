@@ -13,7 +13,7 @@ prepare() {
 
 configure() {
   patch \
-    -i "$core"/$nom/patches/glaucus/0001-disable-static.patch \
+    -i "$extra"/$nom/patches/glaucus/0001-disable-static.patch \
     -p 0
 }
 
