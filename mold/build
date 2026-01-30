@@ -25,6 +25,4 @@ package() {
   make \
     -C build \
     install/strip
-
-  ln -fs $nom "$dir"/usr/bin/ld
 }
