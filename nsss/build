@@ -8,7 +8,7 @@
 
 prepare() {
   patch \
-    -i "$core"/$nom/patches/glaucus/0001-use-gnu-hash-style.patch \
+    -i "$extra"/$nom/patches/glaucus/0001-use-gnu-hash-style.patch \
     -p 0
 }
 
@@ -30,7 +30,4 @@ package() {
   make \
     DESTDIR="$dir" \
     install
-
-  mkdir -p "$dir"/usr/lib/pkgconfig
-  cp -fPp "$core"/$nom/files/$nom.pc "$dir"/usr/lib/pkgconfig
 }
