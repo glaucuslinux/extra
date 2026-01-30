@@ -23,7 +23,7 @@ package() {
     DESTDIR="$dir" \
     install
 
-  cp -fPp "$core"/$nom/files/ksh.kshrc "$dir"/etc
+  cp -fPp "$extra"/$nom/files/ksh.kshrc "$dir"/etc
 
   ln -fs $nom "$dir"/usr/bin/ksh
   ln -fs $nom "$dir"/usr/bin/rksh
