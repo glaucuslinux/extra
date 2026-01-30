@@ -8,7 +8,7 @@
 
 prepare() {
   patch \
-    -i "$core"/$nom/patches/glaucus/0001-fix-CFLAGS-and-LDFLAGS.patch \
+    -i "$extra"/$nom/patches/glaucus/0001-fix-CFLAGS-and-LDFLAGS.patch \
     -p 0
 }
 
