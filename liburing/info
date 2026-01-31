@@ -6,7 +6,8 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-ver="2.9"
-url="https://github.com/axboe/liburing/archive/liburing-2.9.tar.gz"
-sum="9266640d3e0fd1faf055e265e9c7db67"
+ver="2.13"
+url="https://github.com/axboe/liburing/archive/liburing-2.13.tar.gz"
+sum="049eae004c6e8f1c0cc3a63f05e719b0"
 opt="no-check"
+lic="LGPL-2.0-or-later MIT"

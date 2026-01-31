@@ -12,6 +12,9 @@ prepare() {
 
 configure() {
   ./configure \
+    --prefix=/usr \
+    --libdir=/usr/lib \
+    --libdevdir=/usr/lib \
     --use-libc
 }
 
