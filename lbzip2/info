@@ -6,7 +6,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-ver="2.5"
-url="https://github.com/kjn/lbzip2/releases/download/v2.5/lbzip2-2.5.tar.gz"
-sum="28c9b3b920c8a5a3c5a0127750a5f255"
-lic="GPL-3.0-or-later"
+ver='2.5'
+url='https://github.com/kjn/lbzip2/releases/download/v2.5/lbzip2-2.5.tar.gz'
+sum='28c9b3b920c8a5a3c5a0127750a5f255'
+lic='GPL-3.0-or-later'

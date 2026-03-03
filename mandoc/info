@@ -6,9 +6,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-ver="1.14.6"
-url="https://mandoc.bsd.lv/snapshots/mandoc-1.14.6.tar.gz"
-sum=""
-bld="musl-fts netbsd-curses pcre2 zlib-ng"
-run="less musl-fts"
-opt="no-check"
+ver='1.14.6'
+url='https://mandoc.bsd.lv/snapshots/mandoc-1.14.6.tar.gz'
+sum=''
+bld='musl-fts netbsd-curses pcre2 zlib-ng'
+run='less musl-fts'
+opt='no-check'

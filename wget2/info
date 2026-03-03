@@ -6,7 +6,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-ver="2.2.0"
-url="https://ftpmirror.gnu.org/wget/wget2-2.2.0.tar.gz"
-sum="005058d10a6cd1833e6e527884ff79dd"
-bld="aws-lc bzip2 netbsd-curses pcre2 xz zlib-ng zstd"
+ver='2.2.0'
+url='https://ftpmirror.gnu.org/wget/wget2-2.2.0.tar.gz'
+sum='005058d10a6cd1833e6e527884ff79dd'
+bld='aws-lc bzip2 netbsd-curses pcre2 xz zlib-ng zstd'

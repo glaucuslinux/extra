@@ -6,8 +6,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-ver="4.10.2"
-url="https://github.com/ccache/ccache/releases/download/v4.10.2/ccache-4.10.2.tar.gz"
-sum=""
-bld="cmake xxhash"
-opt="no-check"
+ver='4.12.2'
+url='https://github.com/ccache/ccache/releases/download/v4.12.2/ccache-4.12.2.tar.gz'
+sum='707a09f3d5c9f40940f29052ffa8ac24'
+bld='cmake xxhash'
+opt='no-check'
+lic='GPL-3.0-or-later'
