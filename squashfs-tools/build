@@ -8,19 +8,19 @@
 
 build() {
   make \
+    -C $nom \
     XZ_SUPPORT=1 \
     LZO_SUPPORT=1 \
     LZ4_SUPPORT=1 \
     ZSTD_SUPPORT=1 \
-    COMP_DEFAULT=zstd \
-    -C $nom
+    COMP_DEFAULT=zstd
 }
 
 package() {
   make \
+    -C $nom \
     INSTALL_PREFIX="$dir"/usr \
     INSTALL_DIR="$dir"/usr/bin \
     INSTALL_MANPAGES_DIR="$dir"/usr/share/man/man1 \
-    -C $nom \
     install
 }
