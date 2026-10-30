@@ -1,34 +1,33 @@
+# SPDX-FileCopyrightText: Copyright (c) 2018-2026 Firas Khana
 # SPDX-License-Identifier: MPL-2.0
-
-# Copyright © 2018-2026 Firas Khana
 
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 prepare() {
-  cd "$tmp"/$nom
+  cd "$tmp/$nom"
 }
 
 package() {
   # Don't run `make install` as it builds and installs unnecessary stuff
-  ln -fs "$dir"/usr/share/zoneinfo/Asia/Damascus "$dir"/etc/localtime
+  ln -fs "$dir/usr/share/zoneinfo/Asia/Damascus" "$dir/etc/localtime"
 
-  zic -b fat -d "$dir"/usr/share/zoneinfo africa antarctica asia australasia \
+  zic -b fat -d "$dir/usr/share/zoneinfo" africa antarctica asia australasia \
     backward backzone etcetera europe factory northamerica southamerica
-  zic -b fat -d "$dir"/usr/share/zoneinfo/posix africa antarctica asia \
+  zic -b fat -d "$dir/usr/share/zoneinfo/posix" africa antarctica asia \
     australasia backward backzone etcetera europe factory northamerica \
     southamerica
-  zic -b fat -d "$dir"/usr/share/zoneinfo/right africa antarctica asia \
+  zic -b fat -d "$dir/usr/share/zoneinfo/right" africa antarctica asia \
     australasia backward backzone etcetera europe factory northamerica \
     southamerica -L leapseconds
 
-  zic -d "$dir"/usr/share/zoneinfo -p Asia/Damascus
+  zic -d "$dir/usr/share/zoneinfo" -p Asia/Damascus
 
   cp -fPp \
     iso3166.tab \
     leap-seconds.list \
     zone1970.tab \
     zone.tab \
-    "$dir"/usr/share/zoneinfo
+    "$dir/usr/share/zoneinfo"
 }
