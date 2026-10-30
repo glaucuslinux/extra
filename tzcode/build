@@ -1,25 +1,24 @@
+# SPDX-FileCopyrightText: Copyright (c) 2018-2026 Firas Khana
 # SPDX-License-Identifier: MPL-2.0
-
-# Copyright © 2018-2026 Firas Khana
 
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 prepare() {
-  cd "$tmp"/$nom
-  cp -fPpR "$tmp"/tzdata/. .
+  cd "$tmp/$nom"
+  cp -fPpR "$tmp/tzdata/." .
 }
 
 configure() {
   patch \
-    -i "$extra"/$nom/patches/glaucus/0001-disable-static.patch \
+    -i "$extra/$nom/patches/glaucus/0001-disable-static.patch" \
     -p 0
 }
 
 build() {
   make \
-    CC=$CC \
+    CC="$CC" \
     CFLAGS="$CFLAGS" \
     LDFLAGS="$LDFLAGS" \
     tzselect \
@@ -28,14 +27,14 @@ build() {
 }
 
 package() {
-  mkdir -p "$dir"/usr/bin
+  mkdir -p "$dir/usr/bin"
   cp -fPp \
     tzselect \
     zdump \
     zic \
-    "$dir"/usr/bin
+    "$dir/usr/bin"
 
   mkdir -p \
-    "$dir"/usr/share/zoneinfo/posix \
-    "$dir"/usr/share/zoneinfo/right
+    "$dir/usr/share/zoneinfo/posix" \
+    "$dir/usr/share/zoneinfo/right"
 }
