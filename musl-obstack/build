@@ -1,6 +1,5 @@
+# SPDX-FileCopyrightText: Copyright (c) 2018-2026 Firas Khana
 # SPDX-License-Identifier: MPL-2.0
-
-# Copyright © 2018-2026 Firas Khana
 
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -20,15 +19,10 @@ build() {
   make
 }
 
-check() {
-  make \
-    check
-}
-
 package() {
   make \
     DESTDIR="$dir" \
     install-strip
 
-  ln -fs $nom.pc "$dir"/usr/lib/libobstack.pc
+  ln -fs "$nom.pc" "$dir/usr/lib/libobstack.pc"
 }
