@@ -1,6 +1,5 @@
+# SPDX-FileCopyrightText: Copyright (c) 2018-2026 Firas Khana
 # SPDX-License-Identifier: MPL-2.0
-
-# Copyright © 2018-2026 Firas Khana
 
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -8,7 +7,7 @@
 
 build() {
   make \
-    -C $nom \
+    -C "$nom" \
     XZ_SUPPORT=1 \
     LZO_SUPPORT=1 \
     LZ4_SUPPORT=1 \
@@ -18,9 +17,9 @@ build() {
 
 package() {
   make \
-    -C $nom \
-    INSTALL_PREFIX="$dir"/usr \
-    INSTALL_DIR="$dir"/usr/bin \
-    INSTALL_MANPAGES_DIR="$dir"/usr/share/man/man1 \
+    -C "$nom" \
+    INSTALL_PREFIX="$dir/usr" \
+    INSTALL_DIR="$dir/usr/bin" \
+    INSTALL_MANPAGES_DIR="$dir/usr/share/man/man1" \
     install
 }
