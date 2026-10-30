@@ -1,20 +1,19 @@
+# SPDX-FileCopyrightText: Copyright (c) 2018-2026 Firas Khana
 # SPDX-License-Identifier: MPL-2.0
-
-# Copyright © 2018-2026 Firas Khana
 
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 prepare() {
-  cd "$tmp"/$nom/$nom-$nom-$ver
+  cd "$tmp/$nom/$nom-$nom-$ver"
 }
 
 configure() {
   glaucus-muon \
     -Dapparmor=disabled \
     -Dchecks=false \
-    -Ddbus_user=$nom \
+    -Ddbus_user="$nom" \
     -Ddoxygen_docs=disabled \
     -Dducktype_docs=disabled \
     -Depoll=enabled \
@@ -28,8 +27,8 @@ configure() {
     -Druntime_dir=/run \
     -Dselinux=disabled \
     -Dsession_socket_dir=/tmp \
-    -Dsystem_pid_file=/run/$nom/pid \
-    -Dsystem_socket=/run/$nom/system_bus_socket \
+    -Dsystem_pid_file="/run/$nom/pid" \
+    -Dsystem_socket="/run/$nom/system_bus_socket" \
     -Dsystemd=disabled \
     -Dx11_autolaunch=disabled \
     -Dxml_docs=disabled \
