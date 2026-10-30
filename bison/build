@@ -1,6 +1,5 @@
+# SPDX-FileCopyrightText: Copyright (c) 2018-2026 Firas Khana
 # SPDX-License-Identifier: MPL-2.0
-
-# Copyright © 2018-2026 Firas Khana
 
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -8,14 +7,14 @@
 
 prepare() {
   patch \
-    -i "$extra"/$nom/patches/gentoo/$nom-$ver-gcc15-glibcxx-assertions.patch \
+    -i "$extra/$nom/patches/gentoo/$nom-$ver-gcc15-glibcxx-assertions.patch" \
     -p 1
 
   autoreconf -vfis
 
   touch \
-    doc/$nom.1.tmp \
-    doc/$nom.info
+    "doc/$nom.1.tmp" \
+    "doc/$nom.info"
 }
 
 configure() {
@@ -29,11 +28,6 @@ configure() {
 
 build() {
   make
-}
-
-check() {
-  make \
-    check
 }
 
 package() {
